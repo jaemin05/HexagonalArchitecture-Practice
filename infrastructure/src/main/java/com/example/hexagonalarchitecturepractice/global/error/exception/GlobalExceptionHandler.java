@@ -25,7 +25,7 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(BindException.class)
-    public ResponseEntity<BindExceptionResponse> bindExceptionHandler(BindException e) {
+    public ResponseEntity<?> bindExceptionHandler(BindException e) {
 
         Map<String, String> errorMap = new HashMap<>();
 
@@ -33,11 +33,6 @@ public class GlobalExceptionHandler {
             errorMap.put(fieldError.getField(), fieldError.getDefaultMessage());
         }
 
-        BindExceptionResponse bindExceptionResponse = BindExceptionResponse.builder()
-                .status(HttpStatus.BAD_REQUEST)
-                .messages(errorMap)
-                .build();
-
-        return new ResponseEntity<>(bindExceptionResponse, HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(errorMap, HttpStatus.BAD_REQUEST);
     }
 }
