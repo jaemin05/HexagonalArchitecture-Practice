@@ -1,12 +1,10 @@
 package com.example.hexagonalarchitecturepractice.error;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 
 @Getter
-@AllArgsConstructor
-@JsonFormat(shape = JsonFormat.Shape.OBJECT)
+@RequiredArgsConstructor
 public enum ErrorCode {
 
     INTERNAL_SERVER_ERROR(500, "Internal Server Error");
