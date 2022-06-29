@@ -1,6 +1,6 @@
 package com.example.hexagonalarchitecturepractice.domain;
 
-import com.example.hexagonalarchitecturepractice.global.BaseEntity;
+import com.example.hexagonalarchitecturepractice.global.entity.BaseEntity;
 import lombok.*;
 
 import javax.persistence.Column;
@@ -15,7 +15,7 @@ import javax.persistence.Table;
 @Entity
 public class NoticeEntity extends BaseEntity {
 
-    @Column(length = 50 ,nullable = false)
+    @Column(length = 50, nullable = false)
     private String title;
 
     @Column(nullable = false)
