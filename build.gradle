@@ -23,7 +23,7 @@ subprojects {
     apply plugin: 'io.spring.dependency-management'
     apply plugin: 'org.springframework.boot'
 
-    sourceCompatibility = 11
+    sourceCompatibility = 17
 
     repositories {
         mavenCentral()
