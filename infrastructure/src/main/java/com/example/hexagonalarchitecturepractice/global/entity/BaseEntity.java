@@ -1,4 +1,4 @@
-package com.example.hexagonalarchitecturepractice.global;
+package com.example.hexagonalarchitecturepractice.global.entity;
 
 import lombok.Getter;
 import org.hibernate.annotations.GenericGenerator;
