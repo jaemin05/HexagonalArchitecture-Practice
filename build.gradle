@@ -5,6 +5,14 @@ plugins {
     id "org.sonarqube" version "3.4.0.2513"
 }
 
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+}
+
 configurations {
     compileOnly {
         extendsFrom annotationProcessor
@@ -51,12 +59,4 @@ sonarqube {
         property "sonar.organization", "jaemin05"
         property "sonar.host.url", "https://sonarcloud.io"
     }
-}
-
-bootJar {
-    enabled = false
-}
-
-jar {
-    enabled = false
 }
