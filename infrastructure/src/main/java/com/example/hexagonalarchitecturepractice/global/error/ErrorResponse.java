@@ -1,5 +1,6 @@
 package com.example.hexagonalarchitecturepractice.global.error;
 
+import com.example.hexagonalarchitecturepractice.error.ErrorCode;
 import lombok.Getter;
 
 @Getter

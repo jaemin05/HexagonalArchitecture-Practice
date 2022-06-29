@@ -1,4 +1,4 @@
-package com.example.hexagonalarchitecturepractice.global.error;
+package com.example.hexagonalarchitecturepractice.error;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;

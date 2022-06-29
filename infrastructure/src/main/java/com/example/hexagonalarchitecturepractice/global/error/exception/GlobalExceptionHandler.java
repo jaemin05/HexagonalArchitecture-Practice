@@ -1,6 +1,6 @@
 package com.example.hexagonalarchitecturepractice.global.error.exception;
 
-import com.example.hexagonalarchitecturepractice.global.error.ErrorCode;
+import com.example.hexagonalarchitecturepractice.error.ErrorCode;
 import com.example.hexagonalarchitecturepractice.global.error.ErrorResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
