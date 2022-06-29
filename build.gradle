@@ -2,6 +2,7 @@ plugins {
     id 'org.springframework.boot' version '2.7.0'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
+    id "org.sonarqube" version "3.4.0.2513"
 }
 
 configurations {
@@ -42,6 +43,14 @@ springBoot {
 
 tasks.named('test') {
     useJUnitPlatform()
+}
+
+sonarqube {
+    properties {
+        property "sonar.projectKey", "jaemin05_XQUARE-Practice"
+        property "sonar.organization", "jaemin05"
+        property "sonar.host.url", "https://sonarcloud.io"
+    }
 }
 
 jar {
