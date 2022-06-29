@@ -36,14 +36,6 @@ subprojects {
         testImplementation 'org.assertj:assertj-core:3.22.0'
     }
 
-    sonarqube {
-        properties {
-            property "sonar.projectKey", "jaemin05_XQUARE-Practice"
-            property "sonar.organization", "jaemin05"
-            property "sonar.host.url", "https://sonarcloud.io"
-        }
-    }
-
 }
 
 springBoot {
@@ -54,6 +46,13 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
+sonarqube {
+    properties {
+        property "sonar.projectKey", "jaemin05_XQUARE-Practice"
+        property "sonar.organization", "jaemin05"
+        property "sonar.host.url", "https://sonarcloud.io"
+    }
+}
 
 jar {
     enabled = false
