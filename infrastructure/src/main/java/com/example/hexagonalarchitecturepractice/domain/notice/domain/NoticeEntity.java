@@ -1,4 +1,4 @@
-package com.example.hexagonalarchitecturepractice.domain;
+package com.example.hexagonalarchitecturepractice.domain.notice.domain;
 
 import com.example.hexagonalarchitecturepractice.global.entity.BaseEntity;
 import lombok.*;

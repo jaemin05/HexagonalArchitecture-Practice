@@ -10,7 +10,7 @@ import java.util.UUID;
 @Aggregate
 @Getter
 @Builder
-public class NoticeEntity {
+public class Notice {
 
     private UUID id;
 
