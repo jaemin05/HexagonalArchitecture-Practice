@@ -7,8 +7,8 @@ import com.example.hexagonalarchitecturepractice.notice.api.dto.CreateNoticeDoma
 import com.example.hexagonalarchitecturepractice.notice.spi.NoticeRepositorySpi;
 import lombok.RequiredArgsConstructor;
 
-@DomainService
 @RequiredArgsConstructor
+@DomainService
 public class CreateNoticeApiImpl implements CreateNoticeApi {
 
     private final NoticeRepositorySpi noticeRepositorySpi;

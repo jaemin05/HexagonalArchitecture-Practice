@@ -7,9 +7,9 @@ import lombok.Getter;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-@Aggregate
 @Getter
 @Builder
+@Aggregate
 public class Notice {
 
     private UUID id;

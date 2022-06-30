@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
-@RestController
 @RequiredArgsConstructor
 @RequestMapping("/notice")
+@RestController
 public class NoticeController {
 
     private final CreateNoticeApi createNoticeApi;
