@@ -28,6 +28,9 @@ dependencies {
     // configuration
     annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
 
+    implementation 'org.mapstruct:mapstruct:1.5.1.Final'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.1.Final'
+
     runtimeOnly 'mysql:mysql-connector-java'
 }
 
