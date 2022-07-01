@@ -5,7 +5,7 @@ import lombok.Getter;
 
 @Getter
 @Builder
-public class CreateNoticeDomainRequest {
+public class NoticeDomainRequest {
 
     private String title;
     private String content;

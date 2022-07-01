@@ -2,7 +2,9 @@ package com.example.hexagonalarchitecturepractice.notice.api;
 
 import com.example.hexagonalarchitecturepractice.notice.api.dto.NoticeDomainRequest;
 
-public interface CreateNoticeApi {
+import java.util.UUID;
 
-    void createNotice(NoticeDomainRequest request);
+public interface ReviseNoticeApi {
+
+    void reviseNotice(UUID noticeId, NoticeDomainRequest request);
 }
