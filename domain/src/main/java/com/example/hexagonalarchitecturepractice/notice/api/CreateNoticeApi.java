@@ -1,7 +1,8 @@
 package com.example.hexagonalarchitecturepractice.notice.api;
 
-import com.example.hexagonalarchitecturepractice.notice.api.dto.CreateNoticeDomainRequest;
+import com.example.hexagonalarchitecturepractice.notice.api.dto.NoticeDomainRequest;
 
 public interface CreateNoticeApi {
-    void createNotice(CreateNoticeDomainRequest request);
+
+    void createNotice(NoticeDomainRequest request);
 }

@@ -1,9 +1,11 @@
 package com.example.hexagonalarchitecturepractice.notice.spi;
 
 import com.example.hexagonalarchitecturepractice.annotation.Spi;
-import com.example.hexagonalarchitecturepractice.notice.Notice;
+
+import java.util.UUID;
 
 @Spi
 public interface NoticeRepositorySpi {
-    void createNotice(Notice notice);
+
+    boolean isNoticeExists(UUID noticeId);
 }

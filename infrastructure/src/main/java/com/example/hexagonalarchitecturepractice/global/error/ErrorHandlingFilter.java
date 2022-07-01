@@ -1,7 +1,7 @@
 package com.example.hexagonalarchitecturepractice.global.error;
 
 import com.example.hexagonalarchitecturepractice.error.ErrorCode;
-import com.example.hexagonalarchitecturepractice.global.error.exception.CustomException;
+import com.example.hexagonalarchitecturepractice.error.CustomException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;

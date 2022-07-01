@@ -20,4 +20,6 @@ public class NoticeEntity extends BaseEntity {
 
     @Column(nullable = false)
     private String content;
+
+
 }
