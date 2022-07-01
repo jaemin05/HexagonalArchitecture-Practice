@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public enum ErrorCode {
 
+    NOTICE_NOT_FOUND(404, "Notice Not Found"),
     INTERNAL_SERVER_ERROR(500, "Internal Server Error");
 
     private final int status;
