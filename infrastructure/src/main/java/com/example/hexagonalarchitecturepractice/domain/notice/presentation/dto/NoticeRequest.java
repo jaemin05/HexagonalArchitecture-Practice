@@ -8,7 +8,7 @@ import javax.validation.constraints.Size;
 
 @Getter
 @NoArgsConstructor
-public class CreateNoticeRequest {
+public class NoticeRequest {
 
     @NotBlank(message = "title은 필수 입력입니다.")
     @Size(min = 1, max = 50, message = "title은 1~50자리 이내로 입력해주세요.")
