@@ -1,4 +1,4 @@
-package com.example.hexagonalarchitecturepractice.domain.notice.presentation.dto;
+package com.example.hexagonalarchitecturepractice.domain.notice.presentation.dto.request;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
