@@ -4,7 +4,6 @@ import com.example.hexagonalarchitecturepractice.annotation.DomainService;
 import com.example.hexagonalarchitecturepractice.notice.Notice;
 import com.example.hexagonalarchitecturepractice.notice.api.ReviseNoticeApi;
 import com.example.hexagonalarchitecturepractice.notice.api.dto.request.NoticeDomainRequest;
-import com.example.hexagonalarchitecturepractice.notice.exception.NoticeNotFoundException;
 import com.example.hexagonalarchitecturepractice.notice.spi.NoticeRepositorySpi;
 import lombok.RequiredArgsConstructor;
 
@@ -19,9 +18,7 @@ public class ReviseNoticeApiImpl implements ReviseNoticeApi {
     @Override
     public void reviseNotice(UUID noticeId, NoticeDomainRequest request) {
 
-        if (!noticeRepositorySpi.isNoticeExists(noticeId)) {
-            throw NoticeNotFoundException.EXCEPTION;
-        }
+        noticeRepositorySpi.getNoticeExistence(noticeId);
 
         Notice.builder()
                 .title(request.getTitle())
