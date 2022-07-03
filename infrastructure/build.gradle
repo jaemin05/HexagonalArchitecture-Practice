@@ -32,6 +32,12 @@ dependencies {
     annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.1.Final'
 
     runtimeOnly 'mysql:mysql-connector-java'
+
+    implementation 'com.querydsl:querydsl-jpa'
+    annotationProcessor(
+            "javax.persistence:javax.persistence-api",
+            "javax.annotation:javax.annotation-api",
+            "com.querydsl:querydsl-apt:5.0.0:jpa")
 }
 
 test {
