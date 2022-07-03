@@ -3,6 +3,7 @@ package com.example.hexagonalarchitecturepractice.domain.notice.presentation;
 import com.example.hexagonalarchitecturepractice.domain.notice.presentation.dto.request.NoticeRequest;
 import com.example.hexagonalarchitecturepractice.domain.notice.presentation.dto.response.NoticeListResponse;
 import com.example.hexagonalarchitecturepractice.notice.api.CreateNoticeApi;
+import com.example.hexagonalarchitecturepractice.notice.api.DeleteNoticeApi;
 import com.example.hexagonalarchitecturepractice.notice.api.QueryNoticeApi;
 import com.example.hexagonalarchitecturepractice.notice.api.ReviseNoticeApi;
 import com.example.hexagonalarchitecturepractice.notice.api.dto.request.NoticeDomainRequest;
@@ -21,6 +22,7 @@ public class NoticeController {
     private final CreateNoticeApi createNoticeApi;
     private final ReviseNoticeApi reviseNoticeApi;
     private final QueryNoticeApi queryNoticeApi;
+    private final DeleteNoticeApi deleteNoticeApi;
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
@@ -41,6 +43,11 @@ public class NoticeController {
     @GetMapping
     public NoticeListResponse queryNoticeList() {
         return new NoticeListResponse(queryNoticeApi.queryNotice());
+    }
+
+    @DeleteMapping("/{notice-uuid}")
+    public void deleteNotice(@PathVariable("notice-uuid") UUID noticeId) {
+        deleteNoticeApi.deleteNotice(noticeId);
     }
 
     private NoticeDomainRequest builderToDomainRequest(NoticeRequest request) {
