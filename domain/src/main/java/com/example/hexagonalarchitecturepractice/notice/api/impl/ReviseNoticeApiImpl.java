@@ -3,7 +3,7 @@ package com.example.hexagonalarchitecturepractice.notice.api.impl;
 import com.example.hexagonalarchitecturepractice.annotation.DomainService;
 import com.example.hexagonalarchitecturepractice.notice.Notice;
 import com.example.hexagonalarchitecturepractice.notice.api.ReviseNoticeApi;
-import com.example.hexagonalarchitecturepractice.notice.api.dto.NoticeDomainRequest;
+import com.example.hexagonalarchitecturepractice.notice.api.dto.request.NoticeDomainRequest;
 import com.example.hexagonalarchitecturepractice.notice.exception.NoticeNotFoundException;
 import com.example.hexagonalarchitecturepractice.notice.spi.NoticeRepositorySpi;
 import lombok.RequiredArgsConstructor;
