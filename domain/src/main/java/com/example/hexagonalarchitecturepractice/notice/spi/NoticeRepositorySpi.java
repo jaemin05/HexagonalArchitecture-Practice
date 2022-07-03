@@ -7,5 +7,5 @@ import java.util.UUID;
 @Spi
 public interface NoticeRepositorySpi {
 
-    boolean isNoticeExists(UUID noticeId);
+    void getNoticeExistence(UUID noticeId);
 }
