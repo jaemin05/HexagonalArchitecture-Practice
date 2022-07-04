@@ -6,6 +6,7 @@ import com.example.hexagonalarchitecturepractice.notice.exception.NoticeNotFound
 import com.example.hexagonalarchitecturepractice.notice.spi.DeleteNoticeSpi;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.UUID;
 
@@ -16,6 +17,7 @@ public class DeleteNoticeSpiImpl implements DeleteNoticeSpi {
     private final NoticeRepository noticeRepository;
 
     @Override
+    @Transactional
     public void deleteNotice(UUID noticeId) {
 
         NoticeEntity notice = noticeRepository.findById(noticeId)
