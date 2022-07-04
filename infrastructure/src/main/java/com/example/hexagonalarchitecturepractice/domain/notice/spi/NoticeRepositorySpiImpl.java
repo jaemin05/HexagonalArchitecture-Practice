@@ -5,6 +5,7 @@ import com.example.hexagonalarchitecturepractice.notice.exception.NoticeNotFound
 import com.example.hexagonalarchitecturepractice.notice.spi.NoticeRepositorySpi;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.UUID;
 
@@ -15,6 +16,7 @@ public class NoticeRepositorySpiImpl implements NoticeRepositorySpi {
     private final NoticeRepository noticeRepository;
 
     @Override
+    @Transactional
     public void getNoticeExistence(UUID noticeId) {
         noticeRepository.findById(noticeId)
                 .orElseThrow(() -> NoticeNotFoundException.EXCEPTION);
