@@ -6,5 +6,5 @@ import java.util.UUID;
 
 public interface ReviseNoticeApi {
 
-    void reviseNotice(UUID noticeId, NoticeDomainRequest request);
+    void reviseNoticeApi(UUID noticeId, NoticeDomainRequest request);
 }
