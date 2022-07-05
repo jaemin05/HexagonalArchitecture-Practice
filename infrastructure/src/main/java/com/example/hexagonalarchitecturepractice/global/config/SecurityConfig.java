@@ -25,7 +25,7 @@ public class SecurityConfig {
                 .antMatchers(HttpMethod.POST, "/notice").permitAll()
                 .antMatchers(HttpMethod.PUT, "/notice/{notice-uuid}").permitAll()
                 .antMatchers(HttpMethod.GET, "/notice").permitAll()
-                .antMatchers(HttpMethod.DELETE, "/{notice-uuid}").permitAll()
+                .antMatchers(HttpMethod.DELETE, "/notice/{notice-uuid}").permitAll()
 
                 .anyRequest().authenticated().and()
                 .build();
