@@ -1,10 +1,9 @@
 package com.example.hexagonalarchitecturepractice.notice.api.impl;
 
 import com.example.hexagonalarchitecturepractice.annotation.DomainService;
-import com.example.hexagonalarchitecturepractice.notice.Notice;
 import com.example.hexagonalarchitecturepractice.notice.api.ReviseNoticeApi;
 import com.example.hexagonalarchitecturepractice.notice.api.dto.request.NoticeDomainRequest;
-import com.example.hexagonalarchitecturepractice.notice.spi.NoticeRepositorySpi;
+import com.example.hexagonalarchitecturepractice.notice.spi.ReviseNoticeSpi;
 import lombok.RequiredArgsConstructor;
 
 import java.util.UUID;
@@ -13,16 +12,13 @@ import java.util.UUID;
 @DomainService
 public class ReviseNoticeApiImpl implements ReviseNoticeApi {
 
-    private final NoticeRepositorySpi noticeRepositorySpi;
+    private final ReviseNoticeSpi reviseNoticeSpi;
 
     @Override
-    public void reviseNotice(UUID noticeId, NoticeDomainRequest request) {
+    public void reviseNoticeApi(UUID noticeId, NoticeDomainRequest request) {
 
-        noticeRepositorySpi.getNoticeExistence(noticeId);
 
-        Notice.builder()
-                .title(request.getTitle())
-                .content(request.getContent())
-                .build();
+
+        reviseNoticeSpi.reviseNotice(noticeId, request);
     }
 }

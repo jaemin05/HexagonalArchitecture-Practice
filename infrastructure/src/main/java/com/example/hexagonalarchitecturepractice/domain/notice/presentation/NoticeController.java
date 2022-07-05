@@ -37,7 +37,7 @@ public class NoticeController {
     public void reviseNotice(@PathVariable("notice-uuid") UUID noticeId, @RequestBody @Valid NoticeRequest request) {
 
         NoticeDomainRequest domainRequest = builderToDomainRequest(request);
-        reviseNoticeApi.reviseNotice(noticeId, domainRequest);
+        reviseNoticeApi.reviseNoticeApi(noticeId, domainRequest);
     }
 
     @GetMapping

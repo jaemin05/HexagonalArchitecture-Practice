@@ -21,5 +21,8 @@ public class NoticeEntity extends BaseEntity {
     @Column(nullable = false)
     private String content;
 
-
+    public void reviseNotice(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
 }
